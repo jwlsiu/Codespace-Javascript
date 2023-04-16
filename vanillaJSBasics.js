@@ -1,8 +1,7 @@
 // Vanilla JS Basics - Activity 1
-
 // Write a JavaScript program to print the result of 4 operations.
-// Declare each variable and print result
 
+// Declare each variable and print result
 let a = -5 + 8 * 6 
 console.log(a);
 
@@ -17,6 +16,7 @@ console.log(d);
 
 
 // Vanilla JS Basics - Activity 2
+// Write a JavaScript program to divide two numbers, using the input from the user, and print the result on the screen.
 
 // Declare variables for first and second number user input
 let first_num = prompt('Enter first number: ')
