@@ -10,3 +10,8 @@
 ### 3. Vanilla JS Loops: [vanillaJSLoops.js](/vanillaJSLoops.js) ### 
 * **Activity 1:** Write a JavaScript program that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
 * **Activity 2:** Write a JavaScript program to create the multiplication table (from 1 to 10) of a number.
+
+### 4. Vanilla JS Arrays: [vanillaJSArrays.js](/vanillaJSArrays.js) ### 
+* **Activity 1:** Write a JavaScript program to sum values of an array.
+* **Activity 2:** Write a JavaScript program to calculate the average value of an array elements.
+* **Activity 3:** Write a JavaScript program to find the maximum and minimum value of an array.
