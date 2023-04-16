@@ -1,5 +1,6 @@
 // Vanilla JS Basics - Activity 1
 
+// Write a JavaScript program to print the result of 4 operations.
 // Declare each variable and print result
 
 let a = -5 + 8 * 6 
