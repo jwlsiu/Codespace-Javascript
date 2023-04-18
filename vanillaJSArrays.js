@@ -25,15 +25,16 @@ console.log(`The sum is ${sum}`);
 const userArray = []
 let sum = 0
 
-// Ask user to input numbers to create a 7 digit array
-for (let x = 1; x <= 7; x++) {
-	newNum = Number(prompt(`Input number to add to array (${x}/7): `))
+// Ask user to choose the length of the array and input numbers to create the array
+let arrayLength = Number(prompt('Enter length of array: '))
+for (let x = 1; x <= arrayLength; x++) {
+	newNum = Number(prompt(`Input number to add to array (${x}/${arrayLength}): `))
 	userArray.push(newNum)
 	// Sum numbers at each iteration
 	sum += newNum
 };
 // Define an average variable equal to sum of all numbers in the array dividided by the length of the array
-let average = sum / userArray.length
+let average = sum / arrayLength
 // Display result
 console.log(`Average value of the array is ${average}`);
 
