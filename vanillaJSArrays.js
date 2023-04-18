@@ -6,9 +6,10 @@
 const userArray = []
 let sum = 0
 
-// Ask user to input numbers to create a 10 digit array
-for (let x = 1; x <= 10; x++) {
-	newNum = Number(prompt(`Input number to add to array (${x}/10): `))
+// Ask user to define the length of the array and input numbers to create the array
+let arrayLength = Number(prompt('Enter length of array: '))
+for (let x = 1; x <= arrayLength; x++) {
+	newNum = Number(prompt(`Input number to add to array (${x}/${arrayLength}): `))
 	userArray.push(newNum)
 	// Sum numbers at each iteration
 	sum += newNum
