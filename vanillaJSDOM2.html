@@ -1,0 +1,41 @@
+<!-- Write a JavaScript program to calculate the volume of a sphere. -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset=utf-8 />
+		<title>Activity 2 - Vanilla JS DOM</title>
+	</head>
+	<body>
+		<h1>Calculate the volume of a sphere</h1>
+		<p>Input radius value and get the volume of the sphere.</p>
+		<!-- Create a form with one input field for the radius and a calculate button. Volume of the sphere calculation to be displayed in the 'volume' field. -->
+		<!-- Set names for fields so that HTML elements can be found in the DOM. -->
+		<p><form id="radiusForm">
+		Radius: <br>
+		<input type="number" name="radius">
+		</form></p>
+		<p><form id="volumeForm">
+		Volume: <br>
+		<!-- Placeholder in the volume field as 0.000 -->
+		<input type="number" name="volume" value = "0.000">
+		</form></p>
+		<!-- Process the volumeSphere() JavaScript when calculate button is clicked. -->
+		<button onclick="volumeSphere()">Calculate</button>
+	</body>
+	<script>
+		function volumeSphere() {
+		<!-- Set r to be the value entered in the Radius field. -->
+		let r = parseInt(document.getElementsByName("radius")[0].value);
+		<!-- Define r cubed and pi -->
+		let rCubed = Math.pow(r, 3);
+		let pi = Math.PI;
+		<!-- Calculate volume of a sphere with the below formula. -->
+		let result = (4/3) * pi * rCubed;
+		<!-- Display the result in the Volume field, round answer to 3 decimal points. -->
+		document.getElementsByName("volume")[0].value = Math.round(result * 1000) / 1000;
+		}
+	</script>
+</html>
+		
