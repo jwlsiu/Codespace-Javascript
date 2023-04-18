@@ -1,0 +1,26 @@
+<!-- Sample html file with a submit button. Modify the style of the paragraph text through JavaScript code. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title>Activity 1 - Vanilla JS DOM</title>
+    </head> 
+    <body>
+        <p id ='text'>Vanilla JS DOM</p> 
+        <div>
+        <button id="jsstyle"
+        onclick="js_style()">Style</button>
+        </div>
+<!-- Add a js_style function so that when the 'Style' button is clicked, text goes to white, background to black, font size is 30 pixels and there is a thick solid blue border. -->
+		<script>
+			function js_style() {
+				let x = document.getElementById("text");
+				x.style.color = "white";
+				x.style.backgroundColor = "black";
+				x.style.fontSize = "30px";
+				x.style.border = "thick solid blue";
+				
+			}
+		</script>
+    </body>
+</html>
