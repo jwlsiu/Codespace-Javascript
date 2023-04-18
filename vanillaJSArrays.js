@@ -45,18 +45,20 @@ console.log(`Average value of the array is ${average}`);
 // Define an empty Array
 const userArray = []
 
-// Ask user to input numbers to create a 10 digit array
-for (let x = 1; x <= 10; x++) {
-	newNum = Number(prompt(`Input number to add to array (${x}/10): `))
+// Ask user to choose the length of the array and input numbers to create the array
+let arrayLength = Number(prompt('Enter length of array: '))
+for (let x = 1; x <= arrayLength; x++) {
+	newNum = Number(prompt(`Input number to add to array (${x}/${arrayLength}): `))
 	userArray.push(newNum)
 };
 // Display Array
 console.log(`Original Array: [${userArray}]`)
 
-// Declare variable with the Array sorted
-sortedArray = userArray.sort()
+// Sort the array numerically using the compare function
+sortedArray = userArray.sort(function(a, b){return a - b});
+console.log(`Sorted Array: [${sortedArray}]`)
 // Declare variable to access the last Array element which is the maximum
-maxValue = sortedArray[9]
+maxValue = sortedArray[arrayLength - 1]
 // Declare variable to access the first Array element which is the minimum
 minValue = sortedArray[0]
 
