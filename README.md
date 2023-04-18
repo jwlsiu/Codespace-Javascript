@@ -23,5 +23,5 @@
 
 ### 6. Vanilla JS DOM: ### 
 * **Activity 1:** Use the sample html file with a submit button. Modify the style of the paragraph text through JavaScript code. **[vanillaJSDOM1.html](/vanillaJSDOM1.html)**
-* **Activity 2:** Write a JavaScript program to calculate the volume of a sphere. **[vanillaJSDOM2.html]**(/vanillaJSDOM2.html)
+* **Activity 2:** Write a JavaScript program to calculate the volume of a sphere. **[vanillaJSDOM2.html](/vanillaJSDOM2.html)**
 
