@@ -15,3 +15,8 @@
 * **Activity 1:** Write a JavaScript program to sum values of an array.
 * **Activity 2:** Write a JavaScript program to calculate the average value of an array elements.
 * **Activity 3:** Write a JavaScript program to find the maximum and minimum value of an array.
+
+### 5. Vanilla JS Functions: [vanillaJSFunctions.js](/vanillaJSFunctions.js) ### 
+* **Activity 1:** Write 2 JavaScript functions to show the array content and find the max value in the array.
+* **Activity 2:** Write a JavaScript function to calculate the factorial of a number (a non-negative integer n ). The function accepts the number as an argument.
+* **Activity 3:** Write a JavaScript function that takes a number as a parameter and check the number is prime or not. 
