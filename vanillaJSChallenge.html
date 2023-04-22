@@ -7,26 +7,38 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 		<style>
+		/* Add an underline to h1 heading */
 		h1 {
 		text-decoration: underline;
 		}
+		/* Center everything in the 'center' class */
 		.center {
 		display: flex;
 		justify-content: center;
 		align-items: center;	  
 		}
+		/* Top and side margins for 'button' class */
 		.button {
 		margin: 4px 5px;
 		}
+		/* Hoverable button that turns dark grey when mouse hovers over button */
 		.button:hover {
 		background-color:#808080;
 		transition: 0.7s;
 		}
+		/* Text formatting for  'result' class */
 		.result {
 		font-size: 20px;
 		font-weight: bold;
 		text-align: center;
 		margin: 10px;
+		}
+		p {
+		margin: 1px;
+		}
+		/* Show game result in red text */
+		#gameResult {
+		color: red;
 		}
 		</style>
 		<title>Javascript Challenge</title>	
@@ -35,28 +47,37 @@
 		<h1 class="center">Rock, Paper, Scissors</h1>
 		<p class="center">Let's play a game of rock, paper, scissors!</p>
 		
+		<!-- Add a Rock, Paper, Scissors image with 'center' class. -->
 		<div class="center">
 			<img src="rps.png" width="20%" height="20%">
 		</div>
 		<p class="text-center">Choose an option:</p>
 		<div class="center">
+			<!-- Add three buttons with the three game options. Each will call the Rock, Paper, Scissors Game function. Each choice will be passed into the function as an argument.-->
 			<button class="button" onclick="rockPaperScissors('Rock')">Rock</button>
 			<button class="button" onclick="rockPaperScissors('Paper')">Paper</button>
 			<button class="button" onclick="rockPaperScissors('Scissors')">Scissors</button>
 		</div>
-		<p id="gameChoices" class="result"> </p>
-		<p id="gameResult" class="result"> </p>
-		<p id="userScore" class="result"> </p>
-		<p id="computerScore" class="result"> </p>	
+		<!-- Results will be displayed here after first round is played. Result is identified by a unique id. -->
+		<div class="result">
+			<p id="gameChoices"> </p>
+			<p id="gameResult"> </p>
+			<p id="userScore"> </p>
+			<p id="computerScore"> </p>	
+		</div>
 		<div class="center">
+			<!-- Add a reset button to reset scores when clicked. Initially hidden until first round is played. -->
 			<button id="resetButton" class="button" onclick="resetScores()" style="display:none;">Reset Scores</button>
 		</div>
 	</body>
 	<script>
+		// Set user and computer scores to zero as global variables
 		let userScore = 0;
 		let computerScore = 0;
-				
+		
+		// Define function to play the Rock, Paper, Scissors Game
 		function rockPaperScissors(yourChoice) {
+			// Using Math.random function, randomly pick a number between 1 and 3. This number is then assigned to a game option.
 			let computerChoice = Math.floor(Math.random() * 3);
 				switch(computerChoice) {
 					case 0:
@@ -69,12 +90,14 @@
 						computerChoice = "Scissors";
 						break;
 				}
-				
+			
+			// User and computer options are displayed on the page, where id is 'gameChoices'.
 			document.getElementById("gameChoices").innerHTML = `
 			Your choice: ${yourChoice} <br>
 			Computer choice: ${computerChoice}
 			`;
 			
+			// For the different combinations of user and computer choices, display who is the winner and scores. 1 point is added to the winner. Results are displayed and accessed with the id's defined.
 			if (yourChoice == "Rock" && computerChoice == "Scissors") {
 				userScore += 1;
 				document.getElementById("gameResult").innerHTML = `${yourChoice} smashes ${computerChoice}! You win.`;
@@ -111,14 +134,13 @@
 				document.getElementById("computerScore").innerHTML = `Computer score: ${computerScore}`;
 			}	
 			
+			// Display the reset button
 			let x = document.getElementById("resetButton");
 			return x.style.display="block";
 		}	
-		
-	</script>
-		
-	<script>	
+			
 	function resetScores() {
+		// Resets scores when the reset button is clicked on. Set user and computer scores to zero and hide previously chosen choices and round results.
 		userScore = 0;
 		computerScore = 0;
 		document.getElementById("userScore").innerHTML = `Your score: ${userScore}`;
@@ -129,4 +151,5 @@
 	</script>
 
 </html>
+		
 		
